@@ -63,14 +63,14 @@ var res =
   
 ];
 
-res.forEach(function(lista){
-   document.write("<ul><li>" + lista.title + "</ul></li>"
-    )})
+res.forEach(function(element){
+   caja.innerHTML += "<li>" + element.title + "</li>";
+    })
 
 function agregarTarea(){
   var input = document.getElementById("tarea").value;
   var lisTarea = document.getElementsByClassName("tareas-list");
-  lisTarea[0].innerHTML += "<ul><li>" + input.value +"</ul></li>";
+  lisTarea[0].innerHTML += "<li>" + input +"</li>";
 
 }
 
