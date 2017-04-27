@@ -1,4 +1,4 @@
-var lista =
+var res =
 [
   {
     "userId": 1,
@@ -61,13 +61,17 @@ var lista =
     "completed": true
   },
   
-]
+];
 
+res.forEach(function(lista){
+   document.write("<ul><li>" + lista.title + "</ul></li>"
+    )})
 
 function agregarTarea(){
   var input = document.getElementById("tarea").value;
   var lisTarea = document.getElementsByClassName("tareas-list");
-  lisTarea[0].innerHTML += "<li>" + input.value +"</li>";
+  lisTarea[0].innerHTML += "<ul><li>" + input.value +"</ul></li>";
 
 }
+
 
