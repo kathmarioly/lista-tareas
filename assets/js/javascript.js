@@ -59,9 +59,9 @@ var res =
     "id": 10,
     "title": "illo est ratione doloremque quia maiores aut",
     "completed": true
-  },
+  }
   
-];
+]
 
 res.forEach(function(element){
    caja.innerHTML += "<li>" + element.title + "</li>";
@@ -72,12 +72,15 @@ function agregarTarea(){
   var lisTarea = document.getElementsByClassName("tareas-list");
   lisTarea[0].innerHTML += "<li>" + input +"</li>";
 
-}
 
-function tarea(userId, id, title, completed){
-	this.userId = userId;
-	this.id = id;
-	this.title = title;
-	this.completed = completed;
+function Objeto(input){
+	this.userId = 1;
+	this.id = res.length;
+	this.title = input;
+	this.completed = false; 
+   }
+
+   var objtarea = new Objeto(input);
+   return  res.push(objtarea);
 
 }
